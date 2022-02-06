@@ -1,6 +1,6 @@
 # Web3 Wave Portal
 
-This is a demo project built from curriculum from Buildspace. Build a Web3 app with Solidity and ETH smart contracts.
+This is a demo project built from a buildspace project. Build a Web3 app with Solidity and ETH smart contracts.
 
 ## Basic Sample Hardhat Project
 
