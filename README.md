@@ -3,6 +3,7 @@
 This is a demo project built from a buildspace project. Build a Web3 app with Solidity and ETH smart contracts.
 
 Frontend: [https://github.com/jinsley8/web3-wave-portal](https://github.com/jinsley8/web3-wave-portal)
+
 Fork Replit Project: [https://replit.com/@jinsley8/web3-wave-frontend](https://replit.com/@jinsley8/web3-wave-frontend)
 
 ## Basic Sample Hardhat Project
