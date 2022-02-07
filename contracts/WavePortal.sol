@@ -19,7 +19,7 @@ contract WavePortal {
     /* waves avriable to store array of structs */
     Wave[] waves;
 
-    constructor() {
+    constructor() payable {
       console.log("I AM SMART CONTRACT. POG.");
     }
 
