@@ -1,4 +1,4 @@
-require('dotenv').config()
+require('dotenv').config();
 require("@nomiclabs/hardhat-waffle");
 
 // This is a sample Hardhat task. To learn how to create your own go to
@@ -21,8 +21,13 @@ module.exports = {
   solidity: "0.8.4",
   networks: {
     rinkeby: {
-      url: process.env.ALCHEMY_API_KEY,
-      accounts: [process.env.PRIVATE_RINKEBY_ACCOUNT_KEY],
+      url: process.env.DEV_ALCHEMY_KEY,
+      accounts: [process.env.RINKEBY_PRIVATE_KEY],
+    },
+    mainnet: {
+      chainId: 1,
+      url: process.env.PROD_ALCHEMY_KEY,
+      accounts: [process.env.MAINNET_PRIVATE_KEY],
     },
   },
 };
