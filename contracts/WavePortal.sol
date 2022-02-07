@@ -38,8 +38,8 @@ contract WavePortal {
     function wave(string memory _message) public {
       /** Make sure the current timestamp is at least 15-minutes bigger than the last timestamp we stored */
       require(
-        lastWavedAt[msg.sender] + 15 minutes < block.timestamp,
-        "Wait 15m"
+        lastWavedAt[msg.sender] + 5 minutes < block.timestamp,
+        "Wait 5 minutes between waves!"
       );
 
       /** Update the current timestamp we have for the user */
@@ -52,12 +52,13 @@ contract WavePortal {
       waves.push(Wave(msg.sender, _message, block.timestamp));
 
       /** Generate a new seed for the next user that sends a wave */
-      seed = (block.difficulty + block.timestamp + seed) % 100;
+      uint256 randomSeed = (block.difficulty + block.timestamp + seed) % 100;
+      console.log("Random # generated: %s", randomSeed);
 
-      console.log("Random # generated: %d", seed);
+      seed = randomSeed;
 
       /** Give a 50% chance that the user wins the prize. */
-      if (seed <= 50) {
+      if (randomSeed <= 50) {
           console.log("%s won!", msg.sender);
 
         /** Send the prize. */

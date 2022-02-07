@@ -27,7 +27,7 @@ module.exports = {
     mainnet: {
       chainId: 1,
       url: process.env.PROD_ALCHEMY_KEY,
-      accounts: [process.env.MAINNET_PRIVATE_KEY],
+      accounts: [process.env.RINKEBY_PRIVATE_KEY],
     },
   },
 };
